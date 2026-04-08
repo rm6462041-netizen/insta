@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insta Public Explorer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="logo">Instagram</div>
+        <nav>
+          <button class="nav-item active">Home</button>
+          <button class="nav-item">Search</button>
+          <button class="nav-item">Explore</button>
+          <button class="nav-item">Reels</button>
+          <button class="nav-item">Messages</button>
+          <button class="nav-item">Profile</button>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <header class="search-card">
+          <h1>Public Account Explorer</h1>
+          <p>
+            Search demo public accounts, preview stories/posts, and download media for
+            educational/demo use.
+          </p>
+          <div class="search-row">
+            <input id="searchInput" type="text" placeholder="Search username (e.g. travelvibes)" />
+            <button id="searchBtn">Search</button>
+          </div>
+          <p class="note">
+            Production note: For real Instagram data, use official Meta APIs and respect
+            platform terms + copyright rules.
+          </p>
+        </header>
+
+        <section id="results" class="profiles-grid"></section>
+
+        <section id="viewer" class="viewer hidden">
+          <div id="profileHeader" class="profile-header"></div>
+
+          <h2>Stories</h2>
+          <div id="stories" class="stories-row"></div>
+
+          <h2>Posts</h2>
+          <div id="posts" class="posts-grid"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
